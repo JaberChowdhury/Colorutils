@@ -24,6 +24,8 @@ import makeOppositeHSL from "./makeOppositeHSL";
 import makeOppositeRGBA from "./makeOppositeRGBA";
 
 import makeVariant from "./makeVariant";
+import generateDarkColorVariant from "./generateDarkColorVariant";
+import generateLightColorVariant from "./generateLightColorVariant";
 
 class Utils {
   private color: string;
@@ -92,12 +94,17 @@ class Utils {
     makeVariant(input_color);
 
   public generateColors = (limit: number): HEXADECIMAL[] => {
-    let colors: HEXADECIMAL[] = [];
+    const colors: HEXADECIMAL[] = [];
     for (let i = 0; i < limit; i++) {
       colors.push(this.makeHexadecimal());
     }
     return colors;
   };
+
+  public generateDarkColorVariant = (limit: number): HEXADECIMAL[] =>
+    generateDarkColorVariant(limit);
+  public generateLightColorVariant = (limit: number): HEXADECIMAL[] =>
+    generateLightColorVariant(limit);
 
   public getColor = (): GET_COLOR => {
     return {

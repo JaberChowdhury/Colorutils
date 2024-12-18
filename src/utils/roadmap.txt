@@ -30,6 +30,8 @@ class
     -- this.generateRGBA()
 
     -- this.getColor()
+    -- this.generateColors(limit:numbers)
+    -- this.generateDarkColorVariant(limit:numbers)
 
 
 [X] variant maker (universal/for all)
