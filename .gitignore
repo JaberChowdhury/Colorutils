@@ -23,6 +23,7 @@ build/
 *.js
 *.js.map
 *.d.ts
+*.yaml
 
 # Optional npm cache directory
 .npm
