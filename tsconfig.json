@@ -1,25 +1,14 @@
 {
   "compilerOptions": {
-    "outDir": "./build", // Output directory for compiled JavaScript
-    "rootDir": "./src", // Root directory of your TypeScript source files
-    "target": "ES6", // Specify ECMAScript target version
-    "module": "CommonJS", // Specify module code generation
-    "strict": true, // Enable all strict type-checking options
+    "outDir": "./build", // Output directory for compiled files
+    "rootDir": "./src", // Root directory for source files
+    "target": "ES6", // ECMAScript target version
+    "module": "CommonJS", // Use CommonJS module system
+    "strict": true, // Enable strict type checking
     "esModuleInterop": true, // Allow default imports from CommonJS modules
-    "forceConsistentCasingInFileNames": true, // Enforce consistent casing in imports
-    "skipLibCheck": true, // Skip type-checking of declaration files
-    "sourceMap": true // Generate source map files for debugging
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "sourceMap": true // Generate source maps for debugging
   },
-  "include": [
-    "./src/**/*" // Include all files in the src folder
-  ],
-  "exclude": [
-    "node_modules", // Exclude node_modules
-    "build" // Exclude build folder
-  ],
-  "watchOptions": {
-    "watchFile": "useFsEvents", // Use file system events for watching files
-    "watchDirectory": "useFsEvents", // Use file system events for directories
-    "fallbackPolling": "dynamicPriority" // Use polling as a fallback
-  }
+  "include": ["src/**/*"], // Include all TypeScript files in the src folder
+  "exclude": ["node_modules", "build"] // Exclude unnecessary folders
 }
