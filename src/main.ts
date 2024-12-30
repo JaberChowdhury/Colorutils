@@ -11,22 +11,12 @@ import type {
   MAKE_VARIANT,
   GET_COLOR,
 } from "./TYPES";
-import makeHexadecimal from "./makeHexadecimal";
-import HexadecimalModifier from "./HexadecimalModifier";
-import HexadecimalValidator from "./HexadecimalValidator";
-import makeHexadecimalToRGB from "./makeHexadecimalToRGB";
-import makeHexaToHSL from "./makeHexaToHSL";
-import makeHexadecimalToRGBA from "./makeHexadecimalToRGBA";
 
-import makeOppositeHexadecimal from "./makeOppositeHexadecimal";
-import makeOppositeRGB from "./makeOppositeRGB";
-import makeOppositeHSL from "./makeOppositeHSL";
-import makeOppositeRGBA from "./makeOppositeRGBA";
-
-import makeVariant from "./makeVariant";
-import generateDarkColorVariant from "./generateDarkColorVariant";
-import generateLightColorVariant from "./generateLightColorVariant";
-import makeHslToHexadecimal from "./makeHslToHexadecimal";
+import validator from "./module/validation.module";
+import hexadecimal from "./module/hexadecimal.module";
+import opposite from "./module/opposite.module";
+import variant from "./module/variant.module";
+import hsl from "./module/hsl.module";
 
 class Utils {
   private color: string;
@@ -37,28 +27,28 @@ class Utils {
   }
 
   public HexadecimalModifier = (input_color: string): HEXADECIMALMODIFIER =>
-    HexadecimalModifier(input_color);
+    validator.HexadecimalModifier(input_color);
   public HexadecimalValidator = (input_color: string): string =>
-    HexadecimalValidator(input_color);
+    validator.HexadecimalValidator(input_color);
   // generate random hexadecimal color
-  public makeHexadecimal = (): HEXADECIMAL => makeHexadecimal();
+  public makeHexadecimal = (): HEXADECIMAL => hexadecimal.makeHexadecimal();
   public makeHexadecimalToRGB = (input_color: string): RGB_COLOR =>
-    makeHexadecimalToRGB(input_color);
+    hexadecimal.makeHexadecimalToRGB(input_color);
   public makeHexaToHSL = (input_color: string): HSL_COLOR =>
-    makeHexaToHSL(input_color);
+    hexadecimal.makeHexaToHSL(input_color);
   public makeHexadecimalToRGBA = (input_color: string): RGBA_COLOR =>
-    makeHexadecimalToRGBA(input_color);
+    hexadecimal.makeHexadecimalToRGBA(input_color);
   public makeHslToHexadecimal = (h: number, s: number, l: number): string =>
-    makeHslToHexadecimal(h, s, l);
+    hsl.makeHslToHexadecimal(h, s, l);
 
   public makeOppositeHexadecimal = (input_color: string): HEXADECIMAL_COLOR =>
-    makeOppositeHexadecimal(input_color);
+    opposite.makeOppositeHexadecimal(input_color);
   public makeOppositeRGB = (input_color: string): RGB_COLOR =>
-    makeOppositeRGB(input_color);
+    opposite.makeOppositeRGB(input_color);
   public makeOppositeHSL = (input_color: string): HSL_COLOR =>
-    makeOppositeHSL(input_color);
+    opposite.makeOppositeHSL(input_color);
   public makeOppositeRGBA = (input_color: string): RGBA_COLOR =>
-    makeOppositeRGBA(input_color);
+    opposite.makeOppositeRGBA(input_color);
 
   public generateHexadecimal = (): HEXADECIMAL => {
     const hexadecimal = this.HexadecimalModifier(this.color);
@@ -94,7 +84,7 @@ class Utils {
   };
 
   public makeVariant = (input_color: string): MAKE_VARIANT =>
-    makeVariant(input_color);
+    variant.makeVariant(input_color);
 
   public generateColors = (limit: number): HEXADECIMAL[] => {
     const colors: HEXADECIMAL[] = [];
@@ -105,9 +95,9 @@ class Utils {
   };
 
   public generateDarkColorVariant = (limit: number): HEXADECIMAL[] =>
-    generateDarkColorVariant(limit);
+    variant.generateDarkColorVariant(limit);
   public generateLightColorVariant = (limit: number): HEXADECIMAL[] =>
-    generateLightColorVariant(limit);
+    variant.generateLightColorVariant(limit);
 
   public getColor = (): GET_COLOR => {
     return {
@@ -121,3 +111,6 @@ class Utils {
 }
 
 export default Utils;
+
+const colorUtils = new Utils();
+console.log(colorUtils.makeVariant("#000000"));
