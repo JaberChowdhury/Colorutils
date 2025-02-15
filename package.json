@@ -7,14 +7,22 @@
     "build": "tsc",
     "build:watch": "tsc --watch",
     "start": "node build/index.js",
-    "dev": "concurrently \"npm run build:watch\" \"nodemon build/main.js\""
+    "dev": "concurrently \"npm run build:watch\" \"nodemon build/main.js\"",
+    "test": "vitest",
+    "test:ui": "vitest --ui"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^8.2.2",
+    "concurrently": "^9.1.2",
     "nodemon": "^3.1.9",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.3",
+    "@types/node": "^22.13.4",
+    "@vitest/coverage-istanbul": "3.0.5",
+    "@vitest/ui": "3.0.5"
+  },
+  "dependencies": {
+    "vitest": "^3.0.5"
   }
 }
