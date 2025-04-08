@@ -10,13 +10,13 @@ import type {
   HEXADECIMAL_COLOR,
   MAKE_VARIANT,
   GET_COLOR,
-} from "./TYPES";
+} from './TYPES';
 
-import validator from "./module/validation.module";
-import hexadecimal from "./module/hexadecimal.module";
-import opposite from "./module/opposite.module";
-import variant from "./module/variant.module";
-import hsl from "./module/hsl.module";
+import validator from './module/validation.module';
+import hexadecimal from './module/hexadecimal.module';
+import opposite from './module/opposite.module';
+import variant from './module/variant.module';
+import hsl from './module/hsl.module';
 
 class Utils {
   private color: string;
@@ -113,4 +113,4 @@ class Utils {
 export default Utils;
 
 const colorUtils = new Utils();
-console.log(colorUtils.makeVariant("#000000"));
+console.log(colorUtils.makeVariant('#000000'));

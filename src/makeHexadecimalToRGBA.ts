@@ -1,5 +1,5 @@
-import type { RGBA_COLOR } from "./TYPES";
-import makeHexadecimalToRGB from "./makeHexadecimalToRGB";
+import type { RGBA_COLOR } from './TYPES';
+import makeHexadecimalToRGB from './makeHexadecimalToRGB';
 
 const makeHexadecimalToRGBA = (input_color: string): RGBA_COLOR => {
   const { r, g, b } = makeHexadecimalToRGB(input_color);

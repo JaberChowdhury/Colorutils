@@ -1,8 +1,8 @@
-import type { HSL_COLOR } from "./TYPES";
-import HexadecimalValidator from "./HexadecimalValidator";
+import type { HSL_COLOR } from './TYPES';
+import HexadecimalValidator from './HexadecimalValidator';
 
 const makeHexaToHSL = (input_color: string): HSL_COLOR => {
-  const hex = HexadecimalValidator(input_color).replace(/^#/, "");
+  const hex = HexadecimalValidator(input_color).replace(/^#/, '');
 
   // Parse hex color
   const bigint = parseInt(hex, 16);

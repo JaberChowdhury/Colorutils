@@ -4,7 +4,7 @@ const HexadecimalValidator = (input_color: string): string => {
     // Handle 3-character hex codes
     if (input_color.length === 4) {
       const expanded_color =
-        "#" +
+        '#' +
         input_color[1] +
         input_color[1] +
         input_color[2] +

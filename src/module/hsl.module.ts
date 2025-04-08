@@ -1,4 +1,4 @@
-import makeHslToHexadecimal from "../makeHslToHexadecimal";
+import makeHslToHexadecimal from '../makeHslToHexadecimal';
 
 const hsl = {
   makeHslToHexadecimal,

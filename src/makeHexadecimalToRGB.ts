@@ -1,10 +1,10 @@
-import type { RGB_COLOR } from "./TYPES";
-import HexadecimalValidator from "./HexadecimalValidator";
+import type { RGB_COLOR } from './TYPES';
+import HexadecimalValidator from './HexadecimalValidator';
 
 const makeHexadecimalToRGB = (input_color: string): RGB_COLOR => {
   const valaidated_input_color = HexadecimalValidator(input_color);
   const [r1, g1, b1] = valaidated_input_color
-    .replace("#", "")
+    .replace('#', '')
     .match(/.{2}/g) as string[];
 
   const r = parseInt(r1, 16);

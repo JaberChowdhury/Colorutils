@@ -1,6 +1,6 @@
-import makeHslToHexadecimal from "./makeHslToHexadecimal";
-import makeOppositeHexadecimal from "./makeOppositeHexadecimal";
-import { HEXADECIMAL } from "./TYPES";
+import makeHslToHexadecimal from './makeHslToHexadecimal';
+import makeOppositeHexadecimal from './makeOppositeHexadecimal';
+import { HEXADECIMAL } from './TYPES';
 
 const generateDarkColorVariant = (limit: number): HEXADECIMAL[] => {
   const hexadecimal_colors: HEXADECIMAL[] = [];
@@ -8,7 +8,7 @@ const generateDarkColorVariant = (limit: number): HEXADECIMAL[] => {
     const hsl_color = makeHslToHexadecimal(
       Math.random() * 360,
       Math.random() * 100,
-      Math.random() * 50
+      Math.random() * 50,
     );
     const opposite_hexadecimal = makeOppositeHexadecimal(hsl_color);
     const hexadecimal = makeOppositeHexadecimal(opposite_hexadecimal.color);

@@ -1,4 +1,4 @@
-name: CI
+name: Running scripts
 
 on:
   push:
@@ -24,10 +24,19 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm install
+
+      - name: Run format
+        run: npm format
+
+      - name: Run lint
+        run: npm lint
+
+      - name: Run build
+        run: npm build
 
       - name: Run tests
         run: npm test

@@ -1,8 +1,8 @@
-import type { MAKE_VARIANT } from "./TYPES";
-import makeHexaToHSL from "./makeHexaToHSL";
-import makeHslToHexadecimal from "./makeHslToHexadecimal";
-import HexadecimalModifier from "./HexadecimalModifier";
-import makeOppositeHexadecimal from "./makeOppositeHexadecimal";
+import type { MAKE_VARIANT } from './TYPES';
+import makeHexaToHSL from './makeHexaToHSL';
+import makeHslToHexadecimal from './makeHslToHexadecimal';
+import HexadecimalModifier from './HexadecimalModifier';
+import makeOppositeHexadecimal from './makeOppositeHexadecimal';
 
 function rearrangeList(arr: MAKE_VARIANT) {
   const oddIndexed = [];
@@ -25,7 +25,7 @@ const makeVariant = (input_color: string): MAKE_VARIANT => {
   for (let i = 1; i < 100; i++) {
     const new_hsl = { ...hsl, color: `hsl(${hsl.h},${hsl.s},${i})`, l: i };
     const hexadecimal = HexadecimalModifier(
-      makeHslToHexadecimal(new_hsl.h, new_hsl.s, new_hsl.l)
+      makeHslToHexadecimal(new_hsl.h, new_hsl.s, new_hsl.l),
     );
     const opposite_hexadecimal = makeOppositeHexadecimal(hexadecimal.color);
 

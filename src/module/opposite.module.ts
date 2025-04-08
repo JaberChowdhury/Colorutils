@@ -1,7 +1,7 @@
-import makeOppositeHexadecimal from "../makeOppositeHexadecimal";
-import makeOppositeHSL from "../makeOppositeHSL";
-import makeOppositeRGB from "../makeOppositeRGB";
-import makeOppositeRGBA from "../makeOppositeRGBA";
+import makeOppositeHexadecimal from '../makeOppositeHexadecimal';
+import makeOppositeHSL from '../makeOppositeHSL';
+import makeOppositeRGB from '../makeOppositeRGB';
+import makeOppositeRGBA from '../makeOppositeRGBA';
 
 const opposite = {
   makeOppositeHexadecimal,

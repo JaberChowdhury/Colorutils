@@ -1,5 +1,5 @@
-import HexadecimalModifier from "../HexadecimalModifier";
-import HexadecimalValidator from "../HexadecimalValidator";
+import HexadecimalModifier from '../HexadecimalModifier';
+import HexadecimalValidator from '../HexadecimalValidator';
 
 const validator = {
   HexadecimalModifier,

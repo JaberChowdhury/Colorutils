@@ -1,7 +1,7 @@
-import makeHexadecimal from "../makeHexadecimal";
-import makeHexadecimalToRGB from "../makeHexadecimalToRGB";
-import makeHexadecimalToRGBA from "../makeHexadecimalToRGBA";
-import makeHexaToHSL from "../makeHexaToHSL";
+import makeHexadecimal from '../makeHexadecimal';
+import makeHexadecimalToRGB from '../makeHexadecimalToRGB';
+import makeHexadecimalToRGBA from '../makeHexadecimalToRGBA';
+import makeHexaToHSL from '../makeHexaToHSL';
 
 const hexadecimal = {
   makeHexadecimal,

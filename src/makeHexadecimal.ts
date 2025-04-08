@@ -1,7 +1,7 @@
-import type { HEXADECIMAL } from "./TYPES";
+import type { HEXADECIMAL } from './TYPES';
 
 function makeHexadecimal(): HEXADECIMAL {
-  const hexadecimal = "0123456789abcdef".split("");
+  const hexadecimal = '0123456789abcdef'.split('');
   const position1 = Math.floor(Math.random() * hexadecimal.length);
   const position2 = Math.floor(Math.random() * hexadecimal.length);
   const position3 = Math.floor(Math.random() * hexadecimal.length);
@@ -22,13 +22,13 @@ function makeHexadecimal(): HEXADECIMAL {
     hexadecimal.slice().reverse()[position6];
   return {
     main: {
-      color: ("#" + r1 + g1 + b1).toUpperCase(),
+      color: ('#' + r1 + g1 + b1).toUpperCase(),
       r: r1.toUpperCase(),
       g: g1.toUpperCase(),
       b: b1.toUpperCase(),
     },
     opposite: {
-      color: ("#" + r2 + g2 + b2).toUpperCase(),
+      color: ('#' + r2 + g2 + b2).toUpperCase(),
       r: r2.toUpperCase(),
       g: g2.toUpperCase(),
       b: b2.toUpperCase(),
